@@ -1,0 +1,20 @@
+
+<%- include('../partials/html-head') %>
+<!-- <link rel="stylesheet" href="/stylesheets/flights/new.css" /> -->
+<%- include('../partials/nav') %>
+
+<main>
+  <h1><%= title %></h1>
+  <form id="new-form" action="/runs" method="POST">
+
+    <label for="run-input">Run:</label>
+    <input type="text" name="name" id="run-input">
+    <input type="number" name="miles" id='run-input'>
+    <input type="date" name="date" id="run-input">
+    <input type="text" name="route" id="run-input">
+
+    <button type="submit">Add Run</button>
+  </form>
+</main>
+
+<%- include("../partials/footer") %>
