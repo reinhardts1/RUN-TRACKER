@@ -13,13 +13,14 @@ import passport from 'passport'
 import { passDataToView } from './middleware/middleware.js'
 
 // connect to MongoDB with mongoose
-import './config/database.js'
+import('./config/database.js')
 
 // load passport
-import'./config/passport.js'
+import('./config/passport.js')
 
 // import routes
 import { router as indexRouter } from './routes/index.js'
+import { router as runsRouter } from './routes/runs.js'
 import { router as authRouter } from './routes/auth.js'
 
 // create the express app
@@ -64,6 +65,7 @@ app.use(passDataToView)
 
 // router middleware
 app.use('/', indexRouter)
+app.use('/runs', runsRouter)
 app.use('/auth', authRouter)
 
 // catch 404 and forward to error handler
