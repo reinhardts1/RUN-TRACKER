@@ -3,6 +3,7 @@ import { Profile } from "../models/profile.js"
 
 function index(req, res) {
   Run.find({})
+    .populate('owner')
     .then(runs => {
       res.render('runs/index', {
         runs: runs,
@@ -11,7 +12,7 @@ function index(req, res) {
     })
     .catch(error => {
       console.log(error)
-      res.redirect('/runs')
+      res.redirect('/')
     })
 }
 
@@ -22,7 +23,7 @@ function create(req, res) {
       res.redirect('/runs')
     })
     .catch(err => {
-      res.redirect('/runs')
+      res.redirect('/')
     })
 }
 

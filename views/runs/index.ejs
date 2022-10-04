@@ -2,8 +2,10 @@
 <!-- <link rel="stylesheet" href="/stylesheets/flights/index.css" /> -->
 <%- include('../partials/nav') %>
 
-<main>
-  <h1> im working</h1>
-</main>
+<h1>IM WORKING</h1>
+<% runs.forEach(run => { %>
+  <h2><%= runs.name %></h2>
+
+<% }) %>
 
 <%- include('../partials/footer') %>
