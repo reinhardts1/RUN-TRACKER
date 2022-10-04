@@ -1,4 +1,5 @@
 import { Run } from "../models/run.js"
+import { Profile } from "../models/profile.js"
 
 function index(req, res) {
   Run.find({})
