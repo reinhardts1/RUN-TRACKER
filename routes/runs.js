@@ -11,7 +11,7 @@ function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) return next()
   res.redirect('/')
 }
-router.post('/', runsCtrl.create)
+router.post('/', isLoggedIn, runsCtrl.create)
 
 export {
   router
