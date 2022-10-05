@@ -1,11 +1,33 @@
 <%- include('../partials/html-head') %>
-<!-- <link rel="stylesheet" href="/stylesheets/flights/index.css" /> -->
-<%- include('../partials/nav') %>
+  <!-- <link rel="stylesheet" href="/stylesheets/flights/index.css" /> -->
+  <%- include('../partials/nav') %>
 
-<h1>IM WORKING</h1>
-<% runs.forEach(run => { %>
-  <h2><%= runs.name %></h2>
+    <main>
+      <h1>RUNS</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Name:</th>
+            <th>Date:</th>
+            <th>Route:</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% runs.forEach(run => { %>
+            <tr>
+              <td>
+                <%= run.name %>
+              </td>
+              <td>
+                <%= run.date %>
+              </td>
+              <td>
+                <%= run.route %>
+              </td>
+              <td><a href="/runs/<%= run._id %>">Details</a></td>
+              <% }) %>
+        </tbody>
+      </table>
+    </main>
 
-<% }) %>
-
-<%- include('../partials/footer') %>
+    <%- include('../partials/footer') %>
