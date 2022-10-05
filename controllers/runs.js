@@ -35,10 +35,30 @@ function newRun(req, res) {
 }
 
 
+function show(req, res) {
+  Run.findById(req.params.id)
+  .populate('owner')
+  .then(run => {
+    // console.log(taco);
+    res.render('runs/show', {
+      run: run,
+      title: 'Detail'
+
+
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
+
+
 
 export {
   index,
   create,
-  newRun 
+  newRun,
+  show 
 }
 

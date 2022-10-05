@@ -13,6 +13,8 @@ function isLoggedIn(req, res, next) {
 }
 router.post('/', isLoggedIn, runsCtrl.create)
 
+router.get('/:id', runsCtrl.show)
+
 export {
   router
 }
