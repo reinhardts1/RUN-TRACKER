@@ -4,9 +4,27 @@
 </head>
 <body>
   <nav>
-    <a href="/runs/new"> New Run</a>
-    <a href="/runs">View Runs</a>
-    <a href="/profiles">View Runners</a>
+    
+    
+    
+    <a href="/runs/new">
+      <button data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;RUN&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;ADD&nbsp;</span>
+    </button>
+    </a>
+    <a href="/runs">
+      <button data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;RUNS&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;VIEW&nbsp;</span>
+    </button>
+    </a>
+    <a href="/profiles">
+      <button data-text="Awesome" class="button">
+        <span class="actual-text">&nbsp;RUNNERS&nbsp;</span>
+        <span class="hover-text" aria-hidden="true">&nbsp;VIEW&nbsp;</span>
+    </button>
+    </a>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
         <button type="submit">Logout</button>

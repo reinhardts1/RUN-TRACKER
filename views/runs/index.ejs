@@ -1,39 +1,45 @@
 <%- include('../partials/html-head') %>
-  <!-- <link rel="stylesheet" href="/stylesheets/flights/index.css" /> -->
+  <link rel="stylesheet" href="/stylesheets/runs/index.css">
   <%- include('../partials/nav') %>
 
     <main>
-      <h1>RUNS</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Name:</th>
-            <th>Date:</th>
-            <th>Route:</th>
-            <th>Complete:</th>
-            
-          </tr>
-        </thead>
-        <tbody>
-          <% runs.forEach(run => { %>
+      <div class="index-bodyruns">
+
+
+        <h1 class="header">RUNS</h1>
+        <table>
+          <thead>
             <tr>
-              <td>
-                <%= run.name %>
-              </td>
-              <td>
-                <%= run.date %>
-              </td>
-              <td>
-                <%= run.route %>
-              </td>
-              <td>
-                <%= run.complete ? 'complete' : 'not complete' %>
-              </td>
-              <td><a href="/runs/<%= run._id %>"> <%= run.owner.name %> </a></td>
-              
-              <% }) %>
-        </tbody>
-      </table>
+              <th>Name:</th>
+              <th>Date:</th>
+              <th>Route:</th>
+              <th>Complete:</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <% runs.forEach(run=> { %>
+              <tr>
+                <td>
+                  <%= run.name %>
+                </td>
+                <td>
+                  <%= run.date %>
+                </td>
+                <td>
+                  <%= run.route %>
+                </td>
+                <td>
+                  <%= run.complete ? 'complete' : 'not complete' %>
+                </td>
+                <td><a href="/runs/<%= run._id %>">
+                    <%= run.owner.name %>
+                  </a></td>
+
+                <% }) %>
+          </tbody>
+        </table>
+      </div>
     </main>
 
     <%- include('../partials/footer') %>
