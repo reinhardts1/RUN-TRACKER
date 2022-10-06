@@ -3,6 +3,21 @@
 
 
 <h1> IM WORKING</h1>
+<section>
+  <p> <%= run.owner ? run.owner.name : "Unknown"%> RAN...</p>
+  <p> <%= run.miles %> MILES AT</p>
+  <p> <%= run.route %></p>
+  <% if (user.profile._id.equals(run.owner._id)) { %>
+    <form action="/runs/<%= run._id %>? method=DELETE" method="POST">
+      <button type="submit"> Delete Run </button>
+    </form>
+  
+  <% } %>
+
+
+
+
+</section>
 
 
 
