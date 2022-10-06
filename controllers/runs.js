@@ -104,6 +104,21 @@ function deleteRun(req, res) {
   })
 }
 
+function createComment(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    run.comments.push(req.body)
+    run.save()
+    .then(() => {
+      res.redirect('/runs/${run._id}')
+    })
+    .catch(err => {
+      console.log(err)
+      res.redirect('/')
+    })
+  })
+}
+
 
 export {
   index,
@@ -112,6 +127,7 @@ export {
   show,
   edit,
   update,
-  deleteRun as delete
+  deleteRun as delete,
+  createComment,
 }
 

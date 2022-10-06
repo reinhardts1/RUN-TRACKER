@@ -23,6 +23,8 @@ router.put('/:id', isLoggedIn, runsCtrl.update)
 
 router.delete('/:id', isLoggedIn, runsCtrl.delete)
 
+router.post('/:id/comments', runsCtrl.createComment)
+
 export {
   router
 }
