@@ -2,7 +2,8 @@
 <%- include('./partials/nav') %>
 
 <main>
-  <h1>hello, <%= user ? user.profile.name : "friend" %></h1>
+  <h1>RUN TRACKER</h1>
+  <h2>Welcome, <%= user ? user.profile.name : "Runner" %></h2>
   <% if (user?.profile.avatar) { %>
     <div>
       <img
@@ -10,8 +11,6 @@
         alt="<%= user.profile.name %> avatar"
       />
     </div>
-    <a href="/runs/new"> New Run</a>
-    <a href="/runs">View Runs</a>
   <% } %>
 </main>
 
