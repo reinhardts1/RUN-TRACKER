@@ -8,6 +8,11 @@
   <p> <%= run.miles %> MILES AT</p>
   <p> <%= run.route %></p>
   <% if (run.owner.equals(user?.profile._id)) { %>
+
+    <a href="/runs/<%= run._id %>/edit">
+      <button class="btn">Edit Run!</button>
+    </a>
+
     <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
       <button class="btn" type="submit">Delete Run</button>
     </form>

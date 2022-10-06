@@ -42,8 +42,6 @@ function show(req, res) {
     res.render('runs/show', {
       run: run,
       title: 'Detail'
-
-
     })
   })
   .catch(err => {
@@ -51,6 +49,23 @@ function show(req, res) {
     res.redirect('/runs')
   })
 }
+
+function edit(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    res.render('runs/edit', {
+      run,
+      title: 'Edit Run'
+    })
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
+
+
+
 
 function deleteRun(req, res) {
   Run.findById(req.params.id)
@@ -76,6 +91,7 @@ export {
   create,
   newRun,
   show,
+  edit,
   deleteRun as delete
 }
 

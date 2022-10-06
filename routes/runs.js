@@ -15,6 +15,10 @@ router.post('/', isLoggedIn, runsCtrl.create)
 
 router.get('/:id', runsCtrl.show)
 
+router.get('/:id/edit', isLoggedIn, runsCtrl.edit)
+
+// router.put('/:id', isLoggedIn, tacosCtrl.update)
+
 router.delete('/:id', isLoggedIn, runsCtrl.delete)
 
 export {

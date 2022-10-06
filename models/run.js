@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 const comSchema = new mongoose.Schema({
   content: String,
   author: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'}
+}, {
+  timestamps: true
 })
 
 const runSchema = new mongoose.Schema({
@@ -11,7 +13,7 @@ const runSchema = new mongoose.Schema({
   date: Date,
   route: String,
   owner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},
-  comments: [comSchema]
+  comments: [comSchema],
 
 }, {
   timestamps: true

@@ -3,26 +3,18 @@
 <%- include('../partials/nav') %>
 
 <section>
-  <h1>Edit the Taco!</h1>
-  <form action="/tacos/<%= taco._id %>?_method=PUT" method="POST">
+  <h1>Edit Run!</h1>
+  <form action="/runs/<%= run._id %>?_method=PUT" method="POST">
     <label>
-      Name:
+      Run Name:
       <input 
         type="text" 
         name="name"
-        value="<%= taco.name %>"
+        value="<%= run.name %>"
         autocomplete="off"
       >
     </label>
-    <label>
-      Tasty:
-      <input 
-        type="checkbox" 
-        name="tasty"
-        <%= taco.tasty ? "checked" : "" %> 
-      >
-    </label>
-    <button type="submit">Edit the 🌮</button>
+    <button type="submit">DONE</button>
   </form>
 </section>
 
