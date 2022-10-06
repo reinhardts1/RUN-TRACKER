@@ -12,6 +12,7 @@ const runSchema = new mongoose.Schema({
   miles: Number,
   date: Date,
   route: String,
+  complete: Boolean,
   owner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},
   comments: [comSchema],
 

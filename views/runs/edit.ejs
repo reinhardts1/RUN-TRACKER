@@ -14,6 +14,22 @@
         autocomplete="off"
       >
     </label>
+    <label>
+      New Mileage:
+      <input 
+        type="text" 
+        name="miles"
+        value="<%= run.miles %>"
+        autocomplete="off"
+      >
+    </label>
+    <label>
+      Complete:
+      <input 
+        type="checkbox" 
+        name="complete"
+        <%= run.complete ? "checked" : "" %> 
+      >
     <button type="submit">DONE</button>
   </form>
 </section>

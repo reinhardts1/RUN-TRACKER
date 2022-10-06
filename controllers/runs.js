@@ -65,6 +65,25 @@ function edit(req, res) {
 }
 
 
+function update(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    if (run.owner.equals(req.user.profile._id)){
+      req.body.complete = !!req.body.complete
+      run.updateOne(req.body)
+      .then(updatedRun => {
+        res.redirect('/runs/${run._id}')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
+
 
 
 function deleteRun(req, res) {
@@ -92,6 +111,7 @@ export {
   newRun,
   show,
   edit,
+  update,
   deleteRun as delete
 }
 
