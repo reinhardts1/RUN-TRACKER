@@ -39,7 +39,6 @@ function show(req, res) {
   Run.findById(req.params.id)
   .populate('owner')
   .then(run => {
-    // console.log(taco);
     res.render('runs/show', {
       run: run,
       title: 'Detail'
@@ -53,12 +52,30 @@ function show(req, res) {
   })
 }
 
+function deleteRun(req, res) {
+  Run.findById(req.params.id)
+  .then(run => {
+    if (run.owner.equals(req.user.profile._id)){
+      run.delete()
+      .then(deletedRun => {
+        res.redirect('/runs')
+      })
+    } else {
+      throw new Error('NOT AUTHORIZED')
+    }
+  })
+  .catch(err => {
+    console.log(err)
+    res.redirect('/runs')
+  })
+}
 
 
 export {
   index,
   create,
   newRun,
-  show 
+  show,
+  deleteRun as delete
 }
 

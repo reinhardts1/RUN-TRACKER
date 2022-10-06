@@ -15,6 +15,8 @@ router.post('/', isLoggedIn, runsCtrl.create)
 
 router.get('/:id', runsCtrl.show)
 
+router.delete('/:id', isLoggedIn, runsCtrl.delete)
+
 export {
   router
 }
