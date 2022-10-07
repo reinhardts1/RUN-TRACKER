@@ -2,7 +2,11 @@
 <p> This is a collection site where you can store your own and view other users who run and want to keep a track of their fitness progress. Non-users can view people who have added runs onto the runs page, but that's the only thing non-users can do. Users who sign in have much more feature capabilities such as deleting and editing their personal runs, and the ability to add comments onto others runs as well. As a user you also get to view others who have previously used the application.
 </p>
 
-## CHECK OUT MY APP! <a href='https://run-tracker.fly.dev/'></a>
+![APP](readme.png)
+
+
+## CHECK OUT MY APP! 
+<a href='https://run-tracker.fly.dev/'> START </a>
 
 ## TECHNOLOGIES USED!
 
