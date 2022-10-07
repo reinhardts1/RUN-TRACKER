@@ -114,7 +114,7 @@ function createComment(req, res) {
     })
     .catch(err => {
       console.log(err)
-      res.redirect('/')
+      res.redirect('/runs')
     })
   })
 }
