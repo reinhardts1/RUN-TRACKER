@@ -1,8 +1,7 @@
 import mongoose from 'mongoose'
 
-const comSchema = new mongoose.Schema({
+const commentSchema = new mongoose.Schema({
   content: String,
-  author: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'}
 }, {
   timestamps: true
 })
@@ -14,7 +13,7 @@ const runSchema = new mongoose.Schema({
   route: String,
   complete: Boolean,
   owner: {type: mongoose.Schema.Types.ObjectId, ref: 'Profile'},
-  comments: [comSchema],
+  comments: [commentSchema],
 
 }, {
   timestamps: true

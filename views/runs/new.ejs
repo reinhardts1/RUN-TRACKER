@@ -1,20 +1,24 @@
-
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/runs/new.css">
-<%- include('../partials/nav') %>
+  <link rel="stylesheet" href="/stylesheets/runs/new.css">
+  <%- include('../partials/nav') %>
 
-<main>
-  <h1><%= title %></h1>
-  <form id="new-form" action="/runs" method="POST">
+    <main>
+      <h1>
+        <%= title %>
+      </h1>
+      <div class="add-input">
+        <form id="new-form" action="/runs" method="POST">
 
-    <label for="run-input">Run:</label>
-    <input type="text" name="name" placeholder="Name" id="run-input">
-    <input type="number" name="miles" placeholder="Miles Ran" id="run-input">
-    <input type="date" name="date" id="run-input">
-    <input type="text" name="route" placeholder="Enter Run Route" id="run-input">
+          <input type="text" name="name" placeholder=" Run Name" id="run-input" autocomplete="off">
+          <input type="number" name="miles" placeholder="Miles Ran" id="run-input" autocomplete="off">
+          <input type="date" name="date" id="run-input" autocomplete="off">
+          <input type="text" name="route" placeholder="Enter Run Route" id="run-input" autocomplete="off">
 
-    <button type="submit">New Run</button>
-  </form>
-</main>
 
-<%- include("../partials/footer") %>
+          <button type="submit" class="add-btn">New Run</button>
+
+        </form>
+      </div>
+    </main>
+
+    <%- include("../partials/footer") %>

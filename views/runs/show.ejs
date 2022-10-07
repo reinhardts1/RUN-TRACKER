@@ -1,46 +1,72 @@
 <%- include('../partials/html-head') %>
-<link rel="stylesheet" href="/stylesheets/runs/show.css">
+  <link rel="stylesheet" href="/stylesheets/runs/show.css">
   <%- include('../partials/nav') %>
 
 
 
     <section>
       <div class="runners-info">
-        <p>
-          <%= run.owner ? run.owner.name : "Unknown" %> RAN...
-        </p>
-        <p>
-          <%= run.miles %> MILES AT
-        </p>
-        <p>
-          <%= run.route %>
-        </p>
+        <div class="run-items">
+          <p id="runner-item">
+            <%= run.owner ? run.owner.name : "Unknown" %> RAN...
+          </p>
+          <p id="runner-item">
+            <%= run.miles %> MILES AT
+          </p>
+          <p id="runner-item">
+            <%= run.route %>
+          </p>
+        </div>
       </div>
     </section>
     <div class="buttons">
 
-    <% if (run.owner.equals(user?.profile._id)) { %>
-        
+      <% if (run.owner.equals(user?.profile._id)) { %>
 
-      <a href="/runs/<%= run._id %>/edit">
-        <button class="btn">Edit Run!</button>
-      </a>
 
-      <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-        <button class="btn-delete" type="submit">Delete Run</button>
-      </form>
-      <% } %>
+        <a href="/runs/<%= run._id %>/edit">
+          <button class="btn">Edit Run!</button>
+        </a>
+
+        <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
+          <button class="btn-delete" type="submit">Delete Run</button>
+        </form>
+        <% } %>
     </div>
-    <form 
-      id="add-review-form"
-      action="/runs/<%= run._id %>/comments"
-      method="POST"
-    >
-    <label for="content-textarea">Comment:</label>
-    <textarea name="content" id="content-textarea"></textarea>
-    <button type="submit">Add Comment</button>
-    </form>
+    <h2>Comments</h2>
+    <div class="reviews">
 
+
+      <form id="add-review-form" action="/runs/<%= run._id %>/comments" method="POST">
+        <label for="content-textarea">Comment:</label>
+        <textarea name="content" id="content-textarea"></textarea>
+        <button type="submit">Add Comment</button>
+      </form>
+      <% if (run.comments.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Comment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% run.comments.forEach(function(comment) { %>
+              <tr>
+                <td>
+                  <%= comment.createdAt.toLocaleDateString() %>
+                </td>
+                <td>
+                  <%= comment.content %>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+        <% } else { %>
+          <h3>No Comments</h3>
+          <% } %>
+    </div>
 
 
 

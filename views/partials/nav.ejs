@@ -26,7 +26,10 @@
   </div>
     <% if (user) { %>
       <a href="/auth/logout" class="right">
-        <button type="submit">Logout</button>
+        <button data-text="Awesome" class="button">
+          <span class="actual-text">&nbsp;LOGOUT&nbsp;</span>
+          <span class="hover-text" aria-hidden="tru">&nbsp;OUT&nbsp;</span>
+      </button>
       </a>
     <% } else { %>
       <div 
