@@ -5,30 +5,29 @@
 ## CHECK OUT MY APP! <a href='https://run-tracker.fly.dev/'></a>
 
 ## TECHNOLOGIES USED!
-  <li>
-    CSS
-    JavaScript
-    HTML
-    MongoDB
-    git
-    Google OAuth
-    ExpressJS
-    NodeJs
-  </li>
+
+  <li>CSS </li>
+  <li>JavaScript </li>
+  <li> HTML </li>
+  <li> MongoDB </li>
+  <li> git </li>
+  <li>Google OAuth </li>
+  <li>ExpressJS </li>
+  <li> NodeJs </li>
+  
 
 
   ## PLANNING MATERIALS
   <a href='https://trello.com/b/P0VIfD7X/runtracker'> View Planning Materials </a>
 
 ## ICEBOX
-  <li>
-    <ul>
-    Add API to view live maps of runners route
-    Add details on profile pages where users can view past user runs
-    Add Admin privileges to secure and moderate site
-    Add a fitness plan page where users can store and update weight progress along with diet plan
-    Add responsive design for multiple medias
-    Add a calorie calculator to store and update when during fitness journey
-    </ul>
+  
+  <li> Add API to view live maps of runners route</li>
+  <li>Add details on profile pages where users can view past user runs</li>
+  <li>Add Admin privileges to secure and moderate site</li>
+  <li> Add a fitness plan page where users can store and update weight progress along with diet     plan
   </li>
+  <li>Add responsive design for multiple medias</li>
+  <li>Add a calorie calculator to store and update when during fitness journey</li>
+  
 
