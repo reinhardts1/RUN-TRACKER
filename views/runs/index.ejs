@@ -38,8 +38,10 @@
                   <%= run.complete ? 'complete' : 'not complete' %>
                 </td>
                 <td>
-                  <a href="/runs/<%= run._id %>">
-                    <%= run.owner.name %>
+                  <a href="/runs/<%= run._id %>"> 
+                    <button class="profile-btn">
+                      <%= run.owner.name %>
+                    </button>
                   </a>
                 </td>
 
