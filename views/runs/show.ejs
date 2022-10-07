@@ -5,6 +5,9 @@
 
 
     <section>
+      <h1>
+        DETAILS
+      </h1>
       <div class="runners-info">
         <div class="run-items">
           <p id="runner-item">
@@ -25,50 +28,48 @@
 
 
         <a href="/runs/<%= run._id %>/edit">
-          <button class="btn">Edit Run!</button>
+          <button >Edit Run!</button>
         </a>
 
         <form action="/runs/<%= run._id %>?_method=DELETE" method="POST">
-          <button class="btn-delete" type="submit">Delete Run</button>
+          <button type="submit">Delete Run</button>
         </form>
         <% } %>
+
+          <h2>Comments</h2>
+
+
+          <form id="add-review-form" action="/runs/<%= run._id %>/comments" method="POST">
+            <label for="content-textarea">Comment:</label>
+            <textarea name="content" id="content-textarea"></textarea>
+            <button type="submit">Add Comment</button>
+          </form>
+          <% if (run.comments.length) { %>
+            <table>
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Comment</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% run.comments.forEach(function(comment) { %>
+                  <tr>
+                    <td>
+                      <%= comment.createdAt.toLocaleDateString() %>
+                    </td>
+                    <td>
+                      <%= comment.content %>
+                    </td>
+                  </tr>
+                  <% }) %>
+              </tbody>
+            </table>
+            <% } else { %>
+              <h3>No Comments</h3>
+              <% } %>
+
     </div>
-    <h2>Comments</h2>
-    <div class="reviews">
-
-
-      <form id="add-review-form" action="/runs/<%= run._id %>/comments" method="POST">
-        <label for="content-textarea">Comment:</label>
-        <textarea name="content" id="content-textarea"></textarea>
-        <button type="submit">Add Comment</button>
-      </form>
-      <% if (run.comments.length) { %>
-        <table>
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Comment</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% run.comments.forEach(function(comment) { %>
-              <tr>
-                <td>
-                  <%= comment.createdAt.toLocaleDateString() %>
-                </td>
-                <td>
-                  <%= comment.content %>
-                </td>
-              </tr>
-              <% }) %>
-          </tbody>
-        </table>
-        <% } else { %>
-          <h3>No Comments</h3>
-          <% } %>
-    </div>
-
-
 
 
 

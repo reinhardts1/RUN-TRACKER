@@ -1,8 +1,24 @@
-main {
+section {
   display: flex;
   flex-direction: column;
-  text-align: center;
   justify-content: center;
   align-items: center;
-
+  text-align: center;
+  margin: auto;
 }
+
+/* h1 {
+  text-align: center;
+}
+
+.runners-info {
+  text-align: center; */
+
+.buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 8px;
+}
+
