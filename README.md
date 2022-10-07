@@ -22,11 +22,13 @@
 
 ## ICEBOX
   <li>
+    <ul>
     Add API to view live maps of runners route
     Add details on profile pages where users can view past user runs
     Add Admin privileges to secure and moderate site
     Add a fitness plan page where users can store and update weight progress along with diet plan
     Add responsive design for multiple medias
     Add a calorie calculator to store and update when during fitness journey
+    </ul>
   </li>
 
