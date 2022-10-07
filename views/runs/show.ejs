@@ -37,13 +37,13 @@
         <% } %>
 
           <h2>Comments</h2>
-          <div class="cmts">
+          
             <form id="add-review-form" action="/runs/<%= run._id %>/comments" method="POST">
-              <label for="content-textarea">Comment:</label>
+              <div class="cmts">
               <textarea name="content" id="content-textarea"></textarea>
-              <button type="submit" id="cmt-btn">Add Comment</button>
-            </form>
-          </div>
+              <button type="submit" id="cmt-btn">Add Comment</button>             
+            </div>
+            </form> 
           <% if (run.comments.length) { %>
             <table>
               <thead>
