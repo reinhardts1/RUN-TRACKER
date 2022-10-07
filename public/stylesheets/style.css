@@ -63,7 +63,7 @@ main {
 /* button styling */
 .button {
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #37FF8B;
   --fs-size: 2em;
   letter-spacing: 3px;
@@ -75,6 +75,7 @@ main {
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
+
 /* this is the text, when you hover on button */
 .hover-text {
   position: absolute;
@@ -88,6 +89,7 @@ main {
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
 }
+
 /* hover */
 .button:hover .hover-text {
   width: 100%;
@@ -95,11 +97,11 @@ main {
 }
 
 h1 {
-  font-size: 4em;
+  font-size: 2em;
   --border-right: 6px;
   --text-stroke-color: rgba(255, 255, 255, 0.908);
   --animation-color: #37FF8B;
-  --fs-size: 8em;
+  --fs-size: 4em;
   letter-spacing: 3px;
   text-decoration: none;
   font-size: var(--fs-size);
@@ -108,12 +110,13 @@ h1 {
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1.5px var(--text-stroke-color);
+  margin-top: 250px;
 }
 
 h2 {
-  
+
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #37FF8B;
   --fs-size: 2em;
   letter-spacing: 3px;
@@ -127,10 +130,10 @@ h2 {
 }
 
 h3 {
-  
+
   font-size: 300px;
   --border-right: 6px;
-  --text-stroke-color: rgba(255,255,255,0.6);
+  --text-stroke-color: rgba(255, 255, 255, 0.6);
   --animation-color: #37FF8B;
   --fs-size: 2em;
   letter-spacing: 3px;
@@ -141,4 +144,72 @@ h3 {
   text-transform: uppercase;
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+
+.spinner {
+  font-size: 4em;
+  --border-right: 6px;
+  --text-stroke-color: rgba(255, 255, 255, 0.908);
+  --animation-color: #37FF8B;
+  --fs-size: 8em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--text-stroke-color);
+  height: 50px;
+  width: max-content;
+  
+
+  font-family: monospace;
+  letter-spacing: 1em;
+  color: #37FF8B;
+  filter: drop-shadow(0 0 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner span {
+  animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+  animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }

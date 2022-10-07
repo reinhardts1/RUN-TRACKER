@@ -17,6 +17,7 @@ table, tr, td, th {
   border: 1px solid white;
   background: white;
   color: black;
+  text-align: center;
 
 }
 
@@ -24,6 +25,7 @@ th {
   font-size: 1.5em;
   background: #37FF8B;
   padding: 20px;
+  text-align: center;
 
 }
 

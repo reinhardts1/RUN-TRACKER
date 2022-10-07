@@ -10,10 +10,12 @@
         <table>
           <thead>
             <tr>
-              <th>Name:</th>
-              <th>Date:</th>
-              <th>Route:</th>
-              <th>Complete:</th>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Route</th>
+              <th>Miles</th>
+              <th>Complete</th>
+              <th>Runner</th>
 
             </tr>
           </thead>
@@ -30,11 +32,16 @@
                   <%= run.route %>
                 </td>
                 <td>
+                  <%= run.miles %>
+                </td>
+                <td>
                   <%= run.complete ? 'complete' : 'not complete' %>
                 </td>
-                <td><a href="/runs/<%= run._id %>">
+                <td>
+                  <a href="/runs/<%= run._id %>">
                     <%= run.owner.name %>
-                  </a></td>
+                  </a>
+                </td>
 
                 <% }) %>
           </tbody>
