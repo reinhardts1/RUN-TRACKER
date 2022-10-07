@@ -1,18 +1,30 @@
+main {
+  max-height: 80vh;
+}
+
 .index-bodyruns {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  margin: 0 auto;
+  padding: 40px;
+  max-width: 800px;
+  
 }
 
 table, tr, td, th {
   border: 1px solid white;
+  background: white;
+  color: black;
 
 }
 
 th {
   font-size: 1.5em;
+  background: #37FF8B;
+  padding: 20px;
+
 }
 
 .header {
